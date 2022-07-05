@@ -1,0 +1,11 @@
+<hr>
+<h1>Parent Component</h1>
+<label>Enter Parent Component Value: </label>&nbsp;
+<input type="text" #pdata (keyup)="0"><br>
+<label>Value from Child Component is: </label>&nbsp;
+<select name="Parent-Child">
+    <option *ngFor="let i of childValue">{{i}}</option>
+   </select>
+   <hr>
+<app-square-result (childEvent)="catchChildEvent($event)" [parentData]="pdata.value"></app-square-result>
+<hr>
